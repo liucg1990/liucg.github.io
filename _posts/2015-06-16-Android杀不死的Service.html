@@ -4,9 +4,9 @@ title: Android杀不死的Service
 ---
 <a href="http://liucg1990.github.io/">返回</a>
 <p>基本思路：<br/>
-	(1)在AndroidMainfest.xml里把需要“永生”的service用 android:process=".support" 标示运行在另一个进程
-	(2)在Service类的onStartCommand（）函数返回 START_STICKY ；
-	(3)在应用程序的Application类的Oncreate（）函数判断当前进程是否为sopport进程，否则startService，是则bindService。
+	(1)在AndroidMainfest.xml里把需要“永生”的service用 android:process=".support" 标示运行在另一个进程。<br/>
+	(2)在Service类的onStartCommand()函数返回 START_STICKY 。<br/>
+	(3)在应用程序的Application类的Oncreate()函数判断当前进程是否为sopport进程，否则startService，是则bindService。
 </p>
 <p>
 	这样，无论是程序的前台或者后台进程被杀死，都可以通过Service的自动重启而重新恢复。
