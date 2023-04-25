@@ -1,0 +1,7 @@
+---
+layout: page
+title: 关于
+permalink: /关于/
+---
+
+ 分享生活学习工作遇到的问题及解决方法
